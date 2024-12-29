@@ -7,11 +7,15 @@ const NavigationSquares = () => {
       <Link href="/roster" className="square dark">
         <div>
           <h2>Roster</h2>
+          <br></br>
+          <p>Meet the Players!</p>
         </div>
       </Link>
       <Link href="/coaches" className="square">
         <div>
           <h2>Coaches</h2>
+          <br></br>
+          <p>Meet the Coaches!</p>
         </div>
       </Link>
       <Link href="/contact" className="square dark">
