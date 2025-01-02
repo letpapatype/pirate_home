@@ -1,19 +1,11 @@
+import { SocialIcon } from "react-social-icons";
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="social-icons">
-        <a
-          href="https://www.instagram.com/osidepiratesfootball/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/instagram-icon.png"
-            alt="Instagram"
-            className="footer-icon"
-          />
-        </a>
-        <a
+        <SocialIcon url="https://instagram.com/osidepiratesfootball" />
+        {/* <a
           href="https://www.maxpreps.com/ca/oceanside/oceanside-pirates/football/"
           target="_blank"
           rel="noopener noreferrer"
@@ -23,10 +15,8 @@ export default function Footer() {
             alt="MaxPreps"
             className="footer-icon"
           />
-        </a>
-        <a href="mailto:contact1@piratesteam.com">
-          <img src="/email-icon.png" alt="Email" className="footer-icon" />
-        </a>
+        </a> */}
+        <SocialIcon url="mailto:jovannewland@gmail.com" />
       </div>
     </footer>
   );

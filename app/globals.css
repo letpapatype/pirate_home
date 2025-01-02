@@ -63,13 +63,13 @@ body {
 .social-icons {
   display: flex;
   gap: 2rem;
+  max-height: 100%; /* Ensure the social icons container does not exceed the footer height */
 }
 
 .footer-icon {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1);
-  object-fit: contain;
+  max-height: 100%; /* Ensure the icons do not exceed the container height */
 }
 
 .gridContainer {
