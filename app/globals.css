@@ -63,13 +63,13 @@ body {
 .social-icons {
   display: flex;
   gap: 2rem;
-  max-height: 100%; /* Ensure the social icons container does not exceed the footer height */
+  max-height: 100%;
 }
 
 .footer-icon {
   width: 24px;
   height: 24px;
-  max-height: 100%; /* Ensure the icons do not exceed the container height */
+  max-height: 100%;
 }
 
 .gridContainer {
@@ -137,4 +137,20 @@ body {
   flex-direction: column;
   font-size: 1rem;
   line-height: 1.2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
