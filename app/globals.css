@@ -33,16 +33,15 @@ main {
 }
 
 .header-logo-desktop {
-  display: none;
-  margin-right: 0.25rem;
+  margin-right: 2rem;
 }
 
-.header-logo-mobile {
+.mobile-menu-container {
   display: flex;
-  flex-grow: 1;
+  align-items: center;
 }
 
-.mobile-menu-button {
+.menu-button {
   display: flex;
 }
 
@@ -54,25 +53,16 @@ main {
   display: none;
 }
 
+/* Desktop Styles */
 @media (min-width: 900px) {
-  .header-logo-desktop {
-    display: flex;
-  }
-
-  .header-logo-mobile {
-    display: none;
-  }
-
-  .mobile-menu-button {
-    display: none;
-  }
-
-  .mobile-menu {
+  .mobile-menu-container {
     display: none;
   }
 
   .desktop-menu {
     display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 }
 
@@ -234,8 +224,6 @@ tr:nth-child(even) {
   margin: 0.5rem 0;
 }
 
-/* ...existing code... */
-
 .roster-container {
   width: 100%;
   padding: 2rem;
@@ -254,5 +242,3 @@ tr:nth-child(even) {
 .MuiTableCell-root a:hover {
   text-decoration: underline;
 }
-
-/* ...existing code... */

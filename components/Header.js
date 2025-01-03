@@ -31,17 +31,19 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "black" }}>
+    <AppBar position="static" className="header">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ justifyContent: "flex-start" }}>
           <Box className="header-logo-desktop">
             <img src="/logo.png" alt="Pirates Logo" height={50} width={50} />
           </Box>
-          <Box className="mobile-menu-button">
+
+          <Box className="mobile-menu-container">
             <IconButton
               size="large"
               onClick={handleOpenNavMenu}
               color="inherit"
+              className="menu-button"
             >
               <MenuIcon />
             </IconButton>
@@ -59,60 +61,22 @@ export default function Header() {
                   className="menu-link"
                 >
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography>{page.name}</Typography>
                   </MenuItem>
                 </Link>
               ))}
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              anchorEl={anchorElNav}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
-            >
-              {pages.map((page) => (
-                <Link
-                  key={page.name}
-                  href={page.path}
-                  passHref
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.name}</Typography>
-                  </MenuItem>
-                </Link>
-              ))}
-            </Menu>
-          </Box>
-          {/* Logo - Mobile */}
-          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <img src="/logo.png" alt="Pirates Logo" height={40} width={40} />
-          </Box>
-          {/* Desktop Menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box className="desktop-menu">
             {pages.map((page) => (
               <Link
                 key={page.name}
                 href={page.path}
                 passHref
-                style={{ textDecoration: "none" }}
+                className="menu-link"
               >
-                <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page.name}
-                </Button>
+                <Button color="inherit">{page.name}</Button>
               </Link>
             ))}
           </Box>
