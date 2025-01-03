@@ -7,5 +7,9 @@ export default function ClientWrapper() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
-  return isHomePage ? <NavigationSquares /> : null;
+  return (
+    <div className="client-wrapper">
+      {isHomePage ? <NavigationSquares /> : null};
+    </div>
+  );
 }
