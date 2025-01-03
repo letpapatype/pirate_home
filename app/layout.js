@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NavigationSquares from "../components/NavigationSquares";
 import "./globals.css";
+import ClientWrapper from "../components/ClientWrapper";
 
 export const metadata = {
   title: "Pirates",
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <NavigationSquares />
+        <ClientWrapper />
         <Footer />
       </body>
     </html>

@@ -12,6 +12,7 @@ export default function Header() {
         </div>
       </div>
       <nav className="nav">
+        <Link href="/">Home</Link>
         <Link href="/roster">Roster</Link>
         <Link href="/coaches">Coaches</Link>
         <Link href="/contact">Contact Us</Link>

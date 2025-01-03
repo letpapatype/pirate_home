@@ -1,6 +1,5 @@
+"use client";
 import { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 
 export default function Roster() {
   const [players, setPlayers] = useState([]);
@@ -16,7 +15,6 @@ export default function Roster() {
 
   return (
     <div>
-      <Header />
       <main>
         <h1>Oceanside Pirate Roster</h1>
         <table>
@@ -36,7 +34,7 @@ export default function Roster() {
                 }}
               >
                 <td>
-                  <a href={`/rosters/${player.id}`}>
+                  <a href={`/roster/player/${player.id}`}>
                     {player.name.first_name} {player.name.last_name}
                   </a>
                 </td>
@@ -47,7 +45,6 @@ export default function Roster() {
           </tbody>
         </table>
       </main>
-      <Footer />
     </div>
   );
 }

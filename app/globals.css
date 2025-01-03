@@ -11,9 +11,14 @@
 }
 
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .header {
@@ -58,6 +63,7 @@ body {
   padding: 0 2rem;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   color: white;
+  flex-shrink: 0;
 }
 
 .social-icons {
@@ -153,4 +159,23 @@ td {
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.player-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.player-details h1 {
+  margin-bottom: 1rem;
+}
+
+.player-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.player-details li {
+  margin: 0.5rem 0;
 }
